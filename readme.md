@@ -1,5 +1,5 @@
 # Thanks For Using Nasa Circle Image View Library
-## This library is similar to the popular CircleImageView library but it is more light weight and  efficient.
+## This library is similar to the popular CircleImageView library but it is more light weight `7.69 KB` and  efficient.
 ## Follow the documentation below to know how to use the library
 
 ### Step 0: Add this to your project gradle
