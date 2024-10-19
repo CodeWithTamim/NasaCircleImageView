@@ -1,71 +1,92 @@
-# Thanks For Using Nasa Circle Image View Library
-## This library is similar to the popular CircleImageView library but it is more light weight `7.69 KB` and  efficient.
-## Follow the documentation below to know how to use the library
 
-### Step 0: Add this to your project gradle
-#### `settings.gradle`
+# Nasa Circle Image View Library
+
+**Nasa Circle Image View** is a lightweight (~7.69 KB) and efficient library similar to the popular CircleImageView library. It provides a simple way to create circular image views with customizable borders.
+
+## 📚 Documentation
+
+Follow the steps below to integrate **Nasa Circle Image View** into your Android project.
+
+---
+
+### Step 0: Add JitPack to Your Project's Gradle
+
+#### `settings.gradle` (Groovy)
 ```groovy
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
-        ...
-        ...
-        //add jitpack
-        maven { url 'https://jitpack.io' }
+        // other repositories
+        maven { url 'https://jitpack.io' }  // add JitPack repository
     }
-}
-```
-#### `settings.gradle.kts`
-```groovy
-dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-    repositories {
-        ...
-        ...
-        // add jitpack
-        maven(url = "https://jitpack.io")
-    }
-}
-```
-#### `build.gradle` app level module
-```groovy
-dependencies 
-{
-  implementation 'com.github.CodeWithTamim:NasaCircleImageView:1.0.0'
-}
-```
-#### `build.gradle.kts` app level module
-```groovy
-dependencies 
-{
-implementation("com.github.CodeWithTamim:NasaCircleImageView:1.0.0")
 }
 ```
 
-### If your min sdk is not 21 or different then add this to the `AndroidManifest.xml`
+#### `settings.gradle.kts` (Kotlin)
+```kotlin
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        // other repositories
+        maven(url = "https://jitpack.io")  // add JitPack repository
+    }
+}
+```
+
+---
+
+### Step 1: Add the Nasa Circle Image View Dependency
+
+#### `build.gradle` (App-level) (Groovy)
+```groovy
+dependencies {
+    implementation 'com.github.CodeWithTamim:NasaCircleImageView:1.0.0'
+}
+```
+
+#### `build.gradle.kts` (App-level) (Kotlin)
+```kotlin
+dependencies {
+    implementation("com.github.CodeWithTamim:NasaCircleImageView:1.0.0")
+}
+```
+
+---
+
+### Step 2: Update AndroidManifest for Minimum SDK Version
+
+If your minimum SDK version is not 21 or differs, add the following to your `AndroidManifest.xml`:
 
 ```xml
-
 <uses-sdk android:minSdkVersion="your_min_sdk" tools:overrideLibrary="com.nasahacker.downloader" />
 ```
 
-### Step 1 : Add the view to your layout
+---
+
+### Step 3: Add the Circle Image View to Your Layout
+
+You can add the circle image view to your XML layout like this:
 
 ```xml
- <com.nasahacker.library.NasaCircleImageView
-  android:layout_width="match_parent"
-  android:layout_height="match_parent"
-  android:src="@color/white"/>
- ```
-### You can also add a border, use xml attributes or set from code
-#### Using xml attributes
-```xml
- app:borderColor="#ECEC" 
- app:borderWidth="10dp"
+<com.nasahacker.library.NasaCircleImageView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:src="@color/white"/>
 ```
 
-#### Java
+---
 
+### Step 4: Customize Borders (Optional)
+
+You can customize the border color and width using XML attributes or programmatically.
+
+#### Using XML Attributes:
+```xml
+app:borderColor="#ECEC" 
+app:borderWidth="10dp"
+```
+
+#### Java Example:
 ```java
 // Set border color using a direct color value
 circleImageView.setBorderColor(Color.RED);
@@ -74,9 +95,9 @@ circleImageView.setBorderColorResource(R.color.border_color);
 // Set border width
 circleImageView.setBorderWidth(10f); // 10f for 10 pixels
 ```
-#### Kotlin
 
-```Kotlin
+#### Kotlin Example:
+```kotlin
 // Set border color using a direct color value
 circleImageView.setBorderColor(Color.RED)
 // Set border color using a color resource ID
@@ -85,17 +106,16 @@ circleImageView.setBorderColorResource(R.color.border_color)
 circleImageView.setBorderWidth(10f) // 10f for 10 pixels
 ```
 
-### Thanks for reading the documentation, I'm `Tamim`, I made this library and I'm the one who was helping you throughout the documentation :)
-### If the library helped you out then please give it a start and share with your dev friends ! The project is open for contrubution so if you have any fixes or new feature enhancement then just fork it then make your changes create a new brach and then just hit a pull request.
+---
 
-## Thank you guys for your love and support
-## If you have any queries or need help then just open a issue or  <a href="mailto:tamimh.dev@gmail.com">mail me</a> 
+## Contributions and Support
+
+If **Nasa Circle Image View** helped you, consider giving it a ⭐️ and sharing it with fellow developers. Contributions are welcome! Feel free to fork the project, make your changes, and submit a pull request.
+
 ## License
 
-This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the Apache License 2.0. See the [LICENSE](LICENSE) file for more details.
 
+---
 
- 
-
-
-
+Thank you for using **Nasa Circle Image View**! I’m **Tamim**, the creator of this library. If you have any questions or need further assistance, feel free to [open an issue](https://github.com/CodeWithTamim/NasaCircleImageView/issues) or [email me](mailto:tamimh.dev@gmail.com).
