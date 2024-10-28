@@ -1,5 +1,6 @@
 
 # Nasa Circle Image View Library
+[![](https://jitpack.io/v/CodeWithTamim/NasaCircleImageView.svg)](https://jitpack.io/#CodeWithTamim/NasaCircleImageView)
 
 **Nasa Circle Image View** is a lightweight (~7.69 KB) and efficient library similar to the popular CircleImageView library. It provides a simple way to create circular image views with customizable borders.
 
@@ -40,14 +41,14 @@ dependencyResolutionManagement {
 #### `build.gradle` (App-level) (Groovy)
 ```groovy
 dependencies {
-    implementation 'com.github.CodeWithTamim:NasaCircleImageView:1.0.0'
+    implementation 'com.github.CodeWithTamim:NasaCircleImageView:1.0.1'
 }
 ```
 
 #### `build.gradle.kts` (App-level) (Kotlin)
 ```kotlin
 dependencies {
-    implementation("com.github.CodeWithTamim:NasaCircleImageView:1.0.0")
+    implementation("com.github.CodeWithTamim:NasaCircleImageView:1.0.1")
 }
 ```
 
