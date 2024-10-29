@@ -41,14 +41,14 @@ dependencyResolutionManagement {
 #### `build.gradle` (App-level) (Groovy)
 ```groovy
 dependencies {
-    implementation 'com.github.CodeWithTamim:NasaCircleImageView:1.0.1'
+    implementation 'com.github.CodeWithTamim:NasaCircleImageView:1.0.4'
 }
 ```
 
 #### `build.gradle.kts` (App-level) (Kotlin)
 ```kotlin
 dependencies {
-    implementation("com.github.CodeWithTamim:NasaCircleImageView:1.0.1")
+    implementation("com.github.CodeWithTamim:NasaCircleImageView:1.0.4")
 }
 ```
 
