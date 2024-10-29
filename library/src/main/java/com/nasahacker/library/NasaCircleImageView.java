@@ -147,13 +147,22 @@ public class NasaCircleImageView extends AppCompatImageView {
      */
     private Bitmap getBitmapFromDrawable() {
         if (getDrawable() == null) return null;
-        Bitmap bitmap = Bitmap.createBitmap(getDrawable().getIntrinsicWidth(),
-                getDrawable().getIntrinsicHeight(), Bitmap.Config.ARGB_8888);
+
+        int intrinsicWidth = getDrawable().getIntrinsicWidth();
+        int intrinsicHeight = getDrawable().getIntrinsicHeight();
+
+        // Check if intrinsic width and height are greater than 0
+        if (intrinsicWidth <= 0 || intrinsicHeight <= 0) {
+            return null;
+        }
+
+        Bitmap bitmap = Bitmap.createBitmap(intrinsicWidth, intrinsicHeight, Bitmap.Config.ARGB_8888);
         Canvas canvas = new Canvas(bitmap);
         getDrawable().setBounds(0, 0, canvas.getWidth(), canvas.getHeight());
         getDrawable().draw(canvas);
         return bitmap;
     }
+
 
     /**
      * Updates the shader matrix to ensure the image scales and centers correctly.
